@@ -40,8 +40,10 @@ To set up the application on your local machine, follow these steps:
 
 ### :clipboard: **Prerequisites**
 
-- Make sure you have **Java 8** or higher installed.  
-  You can download Java from the [official Oracle website](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html).
+- Make sure you have **Java 21** or higher installed.  
+  You can download Java from the [official Oracle website](https://www.oracle.com/java/technologies/downloads/).
+- **Apache Maven** is required to build and run the project.  
+  You can download it from the [official Maven website](https://maven.apache.org/download.cgi).
 
 ### :floppy_disk: **Clone the Repository**
 
@@ -53,22 +55,30 @@ git clone https://github.com/Fizryan/TaskList.git
 
 ### :hammer_and_wrench: **Compile and Run**
 
+This project uses **Maven**.
+
 1. Navigate to the project directory:
 
    ```bash
-   cd TaskList/src/tasklist
+   cd TaskList
    ```
 
-2. Compile the project:
+2. Compile and package the project into an executable JAR:
 
    ```bash
-   javac TaskList.java
+   mvn clean package
    ```
 
-3. Run the main class:
+3. Run the application — either directly via Maven:
 
    ```bash
-   java Main
+   mvn exec:java
+   ```
+
+   or by running the generated JAR:
+
+   ```bash
+   java -jar target/tasklist.jar
    ```
 
 ---
