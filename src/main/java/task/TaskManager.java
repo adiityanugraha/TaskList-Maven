@@ -10,6 +10,7 @@ public class TaskManager implements TaskInter{
     private List<Task> tasks = new ArrayList<>();
     
     // Constructor
+    @SuppressWarnings("this-escape")
     public TaskManager(String username){
         this.taskFile = username + ".dat";
         loadTasks();
@@ -103,6 +104,7 @@ public class TaskManager implements TaskInter{
     
     // Buat load task dari file .dat
     @Override
+    @SuppressWarnings("unchecked")
     public void loadTasks(){
         File file = new File(taskFile);
         if (file.exists()){

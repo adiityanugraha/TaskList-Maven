@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 // Class buat nyimpen data Tugas saat program jalan
 public abstract class Task implements Serializable{
+    private static final long serialVersionUID = 1L;
     private String taskName;
     private String description;
     private String createdDate;

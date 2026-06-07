@@ -39,6 +39,7 @@ public class UserManager implements Auth{
     }
     
     // Method untuk load data akun user dari file
+    @SuppressWarnings("unchecked")
     private void loadUsers(){
         File file = new File(USER_FILE);
         if (file.exists()){
